@@ -13,8 +13,27 @@
         }
     ],
     "env": {
+        "APP_NAME": "GesAnnonce",
         "APP_ENV": "production",
+        "APP_KEY": "base64:Q9hdexltETEF3fD0r6R0L7HRsuMg8j8v+HAEMa04DS8=",
         "APP_DEBUG": "false",
-        "APP_KEY": "base64:Q9hdexltETEF3fD0r6R0L7HRsuMg8j8v+HAEMa04DS8="
+        "APP_URL": "https://ges-annonce.vercel.app",
+        "APP_LOCALE": "en",
+        "APP_FALLBACK_LOCALE": "en",
+        "APP_FAKER_LOCALE": "en_US",
+        "LOG_CHANNEL": "stderr",
+        "LOG_LEVEL": "debug",
+        "DB_CONNECTION": "mysql",
+        "DB_HOST": "votre_host_railway",
+        "DB_PORT": "3306",
+        "DB_DATABASE": "ges-annonce",
+        "DB_USERNAME": "root",
+        "DB_PASSWORD": "",
+        "SESSION_DRIVER": "file",
+        "SESSION_LIFETIME": "120",
+        "FILESYSTEM_DISK": "local",
+        "QUEUE_CONNECTION": "sync",
+        "CACHE_STORE": "file",
+        "BCRYPT_ROUNDS": "12"
     }
 }
