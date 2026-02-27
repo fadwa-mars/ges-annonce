@@ -1,27 +1,41 @@
-# Ges-Annonce — Application de Gestion des Annonces Immobilières
+<div align="center">
 
-Application Laravel permettant de gérer des annonces de vente immobilière (CRUD complet) avec upload de photos et dashboard de statistiques.
+# 🏠 Ges-Annonce
+
+### Application de Gestion des Annonces Immobilières
+
+![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/Bootstrap_5-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
+![Bootstrap Icons](https://img.shields.io/badge/Bootstrap_Icons-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
+![Blade](https://img.shields.io/badge/Blade-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)
+
+*Application Laravel permettant de gérer des annonces de vente immobilière (CRUD complet) avec upload de photos et dashboard de statistiques.*
+
+</div>
 
 ---
 
-## Prérequis
+## 📋 Prérequis
 
-- PHP >= 8.1
-- Composer
-- MySQL
-- Node.js & NPM
+| Outil | Version |
+|-------|---------|
+| PHP | >= 8.1 |
+| Composer | Dernière version |
+| MySQL | Dernière version |
+| Node.js & NPM | Dernière version |
 
 ---
 
-## Installation
+## ⚙️ Installation
 
-### 1. Créer le projet
+**1. Créer le projet**
 ```bash
 composer create-project laravel/laravel ges-annonce
 cd ges-annonce
 ```
 
-### 2. Configurer la base de données dans `.env`
+**2. Configurer la base de données dans `.env`**
 ```bash
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
@@ -31,7 +45,7 @@ DB_USERNAME=root
 DB_PASSWORD=
 ```
 
-### 3. Créer les fichiers via Artisan
+**3. Créer les fichiers via Artisan**
 ```bash
 php artisan make:migration create_annonce_table
 php artisan make:migration add_photo_to_annonce_table
@@ -40,29 +54,29 @@ php artisan make:model Annonce
 php artisan make:controller AnnonceController --resource
 ```
 
-### 4. Exécuter les migrations
+**4. Exécuter les migrations**
 ```bash
 php artisan migrate
 ```
 
-### 5. Créer le lien Storage
+**5. Créer le lien Storage**
 ```bash
 php artisan storage:link
 ```
 
-### 6. Exécuter le seeder
+**6. Exécuter le seeder**
 ```bash
 php artisan db:seed --class=AnnoncesTableSeeder
 ```
 
-### 7. Lancer le serveur
+**7. Lancer le serveur**
 ```bash
 php artisan serve
 ```
 
 ---
 
-## Structure du projet
+## 📁 Structure du projet
 
 ```
 ges-annonce/
@@ -89,78 +103,84 @@ ges-annonce/
 │           ├── show.blade.php
 │           ├── form.blade.php
 │           └── dashboard.blade.php
-├── routes/
-│   └── web.php
-└── vercel.json
+└── routes/
+    └── web.php
 ```
 
 ---
 
-## Routes disponibles
+## 🗺️ Routes disponibles
 
 ```bash
-# Afficher toutes les routes
 php artisan route:list
 ```
 
 | Method | URI | Name | Description |
 |--------|-----|------|-------------|
-| GET | /annonces/dashboard | - | Dashboard statistiques |
-| GET | /annonce | annonce.index | Liste des annonces |
-| GET | /annonce/create | annonce.create | Formulaire création |
-| POST | /annonce | annonce.store | Enregistrer annonce |
-| GET | /annonce/{id} | annonce.show | Détail annonce |
-| GET | /annonce/{id}/edit | annonce.edit | Formulaire modification |
-| PUT | /annonce/{id} | annonce.update | Modifier annonce |
-| DELETE | /annonce/{id} | annonce.destroy | Supprimer annonce |
+| `GET` | /annonces/dashboard | — | Dashboard statistiques |
+| `GET` | /annonce | annonce.index | Liste des annonces |
+| `GET` | /annonce/create | annonce.create | Formulaire création |
+| `POST` | /annonce | annonce.store | Enregistrer annonce |
+| `GET` | /annonce/{id} | annonce.show | Détail annonce |
+| `GET` | /annonce/{id}/edit | annonce.edit | Formulaire modification |
+| `PUT` | /annonce/{id} | annonce.update | Modifier annonce |
+| `DELETE` | /annonce/{id} | annonce.destroy | Supprimer annonce |
 
 ---
 
-## Fonctionnalités
+## ✨ Fonctionnalités
 
-### CRUD Annonces
-- Lister toutes les annonces
-- Créer une nouvelle annonce avec validation
-- Afficher le détail d'une annonce
-- Modifier une annonce
-- Supprimer une annonce avec confirmation
+<table>
+<tr>
+<td valign="top">
 
-### Upload Photo
-- Ajout du champ photo dans la table annonce
-- Upload et stockage des images dans `storage/app/public/annonces`
-- Affichage de la photo dans index, show et edit
-- Suppression automatique de l'ancienne photo lors de la modification
-- Suppression automatique de la photo lors de la suppression de l'annonce
+**🔧 CRUD Annonces**
+- ✅ Lister toutes les annonces
+- ✅ Créer une annonce avec validation
+- ✅ Afficher le détail d'une annonce
+- ✅ Modifier une annonce
+- ✅ Supprimer avec confirmation
 
-### Dashboard Statistiques
-- Nombre total d'annonces `count()`
-- Valeur totale du catalogue `sum('prix')`
-- Prix moyen d'un bien `avg('prix')`
-- Superficie totale `sum('superficie')`
+</td>
+<td valign="top">
+
+**📸 Upload Photo**
+- ✅ Champ photo dans la table
+- ✅ Stockage dans `storage/annonces`
+- ✅ Affichage dans index, show, edit
+- ✅ Suppression auto à la modification
+- ✅ Suppression auto à la suppression
+
+</td>
+<td valign="top">
+
+**📊 Dashboard Statistiques**
+- ✅ Total annonces `count()`
+- ✅ Valeur totale `sum('prix')`
+- ✅ Prix moyen `avg('prix')`
+- ✅ Superficie totale `sum('superficie')`
+
+</td>
+</tr>
+</table>
 
 ---
 
-## Technologies utilisées
+## 🚀 Push sur GitHub
 
-![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
-![Bootstrap](https://img.shields.io/badge/Bootstrap_5-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
-![Bootstrap Icons](https://img.shields.io/badge/Bootstrap_Icons-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
-![Blade](https://img.shields.io/badge/Blade-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)
-
----
-
-## Pusher sur GitHub
 ```bash
 git init
 git add .
-git commit -m "Application gestion annonces immobilières"
+git commit -m "TP6 - Application gestion annonces immobilières"
 git remote add origin https://github.com/votre-username/ges-annonce.git
 git branch -M main
 git push -u origin main
 ```
 
+---
 
-## Auteur
+<div align="center">
 
-Projet réalisé par @mars-Fadwa
+**[@mars-Fadwa](https://github.com/fadwa-mars)**
+
+</div>
