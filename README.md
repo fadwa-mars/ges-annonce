@@ -181,27 +181,27 @@ git push -u origin main
 
 ## 📸 Captures d'écran
 
-### 📋 Liste des annonces
+### Liste des annonces
 ![Index](screenshots/index_annonce.png)
 
 ---
 
-### ➕ Ajouter une annonce
+### Ajouter une annonce
 ![Add](screenshots/add_annonce.png)
 
 ---
 
-### ✏️ Modifier une annonce
+### Modifier une annonce
 ![Edit](screenshots/edit_annonce.png)
 
 ---
 
-### 🔍 Détails d'une annonce
+### Détails d'une annonce
 ![Show](screenshots/show_annonce.png)
 
 ---
 
-### 🗑️ Supprimer une annonce
+### Supprimer une annonce
 ![Delete](screenshots/delete_annonce.png)
 
 ---
