@@ -15,6 +15,6 @@
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "false",
-        "APP_KEY": "base64:votre_app_key_ici"
+        "APP_KEY": "base64:Q9hdexltETEF3fD0r6R0L7HRsuMg8j8v+HAEMa04DS8="
     }
 }
