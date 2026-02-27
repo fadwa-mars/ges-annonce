@@ -179,6 +179,33 @@ git push -u origin main
 
 ---
 
+## 📸 Captures d'écran
+
+### 📋 Liste des annonces
+![Index](index_annonce.png)
+
+---
+
+### ➕ Ajouter une annonce
+![Add](add_annonce.png)
+
+---
+
+### ✏️ Modifier une annonce
+![Edit](edit_annonce.png)
+
+---
+
+### 🔍 Détails d'une annonce
+![Show](show_annonce.png)
+
+---
+
+### 🗑️ Supprimer une annonce
+![Delete](delete_annonce.png)
+
+---
+
 <div align="center">
 
 **[@mars-Fadwa](https://github.com/fadwa-mars)**
